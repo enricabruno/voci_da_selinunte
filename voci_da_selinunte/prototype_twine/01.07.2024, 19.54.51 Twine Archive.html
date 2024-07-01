@@ -1,0 +1,1153 @@
+<tw-storydata name="Voci da Selinunte" startnode="93" creator="Twine" creator-version="2.9.0" format="Harlowe" format-version="3.3.9" ifid="4CF96EE6-1ACB-407B-A75F-8831EF113ABC" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story[tags~="pulci"] {background-image:"voci_da_selinunte/img/pulci.png";}
+
+tw-story[tags~="guerra"] {background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a1/Representacion_romantica_de_la_batalla_de_Himera.jpg");
+background-size:cover;}
+
+tw-hook[name="story"] {background-color: #F7F0DE;
+padding: 20px;}
+tw-hook[name="end"] {background-color: black; padding: 10px;}
+
+
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css")
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="guerra" color="red"></tw-tag><tw-tag name="pulci" color="yellow"></tw-tag><tw-passagedata pid="1" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]</tw-passagedata><tw-passagedata pid="2" name="chap.1" tags="" position="575,450" size="100,100"></tw-passagedata><tw-passagedata pid="3" name="chap.2" tags="" position="450,450" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]
+</tw-passagedata><tw-passagedata pid="5" name="chap.2" tags="" position="450,450" size="100,100">&lt;!--Scelta--&gt;
+(set: $century to &quot;&quot;)
+
+(dropdown: 2bind $century,&quot;-- Select --&quot;,&quot;XVI century&quot;,&quot;XV century&quot;)
+(live: 0.1s)[
+    (if: $century is not &quot;-- Select --&quot; and $century is not &quot;&quot; and is &quot;XVI century&quot;)[
+        (go-to: &quot;chap.5&quot;)]
+        (if: $century  is not &quot;-- Select --&quot; and $century is not &quot;&quot; and is &quot;XV century&quot;)[
+        (go-to: &quot;chap.4.1&quot;)]
+]</tw-passagedata><tw-passagedata pid="6" name="chap.1" tags="" position="575,450" size="100,100">###&#39;&#39;Let&#39;s introduce him!&#39;&#39;
+
+(after:2s)[&lt;q&gt;Hey you, nice to meet you! I&#39;m Tommaso Fazello and I come from the past, but...&lt;/q&gt;]
+(after:4s)[&lt;q&gt;...what year is this??? Can you help me?&lt;/q&gt;]
+(after:5s)[(input-box:bind $year,&quot;X&quot;,1)]{(live: )[
+    (if: $year is &#39;2024&#39;)[
+        [[[Let me know...|chap.3]]](stop: )
+    ]
+]}
+
+
+</tw-passagedata><tw-passagedata pid="7" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]</tw-passagedata><tw-passagedata pid="8" name="chap.1" tags="" position="575,450" size="100,100"></tw-passagedata><tw-passagedata pid="9" name="chap.2" tags="" position="450,450" size="100,100"></tw-passagedata><tw-passagedata pid="10" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]
+</tw-passagedata><tw-passagedata pid="11" name="chap.2" tags="" position="450,450" size="100,100"># What a pity...&lt;br&gt;
+###(after:1s)[...are you sure?]
+(after:3s)[Give me a chance, you don&#39;t even know what I&#39;m talking about!]
+(after:3s)[At least hear the beginning of the story before deciding...]
+
+&lt;!--Scelta--&gt;
+(after:5s)[[[Let&#39;s try|chap.1]]]
+(after:5s)[[[Sorry, I have no interest|chap.x]]]</tw-passagedata><tw-passagedata pid="12" name="chap.1" tags="" position="575,450" size="100,100">###&#39;&#39;Let&#39;s introduce him!&#39;&#39;
+
+(after:2s)[//Hey you, nice to meet you! I&#39;m Tommaso Fazello and I come from the past, but...//]
+(after:4s)[//..what year is this??? Can you help me?//]
+(after:5s)[(input-box:bind $year,&quot;X&quot;,1)]
+{(live: )[
+    (if: $year is &#39;2024&#39;)[
+        [[[Let&#39;s find out!|chap.3]]](stop: )
+    ]
+]}
+
+
+</tw-passagedata><tw-passagedata pid="13" name="chap.3" tags="" position="575,575" size="100,100">//Oh! $year...it&#39;s been a long time since I was here for the first time!
+You would never believe it but it was almost five hundred years ago...//
+
+(after:5s)[//Can you guess what period am I referring to?//]
+
+&lt;!--Scelte di secolo--&gt;
+(after:6s)[[[XII century|chap.4]]]
+(after:6s)[[[XVI century|chap.5]]]
+(after:6s)[[[XVII century|chap.6]]]</tw-passagedata><tw-passagedata pid="14" name="chap.5" tags="" position="700,700" size="100,100">##//You got it!//
+
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//It was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]
+
+&lt;!--Scelta--&gt;
+</tw-passagedata><tw-passagedata pid="15" name="chap.6" tags="" position="450,700" size="100,100">    &lt;style&gt;
+        /* Inserisci qui il CSS */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .word {
+            font-size: 24px;
+            letter-spacing: 10px;
+        }
+        .letters {
+            margin: 20px 0;
+        }
+        .letter {
+            display: inline-block;
+            margin: 0 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;Gioco dell&#39;impiccato&lt;/h1&gt;
+        &lt;div class=&quot;word&quot; id=&quot;word&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;letters&quot; id=&quot;letters&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;message&quot; id=&quot;message&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        // Inserisci qui il JavaScript
+        const words = [&#39;RENAISSANCE&#39;];
+        let selectedWord = words[Math.floor(Math.random() * words.length)];
+        let guessedLetters = [];
+        let wrongAttempts = 0;
+
+        const wordContainer = document.getElementById(&#39;word&#39;);
+        const lettersContainer = document.getElementById(&#39;letters&#39;);
+        const messageContainer = document.getElementById(&#39;message&#39;);
+
+        function displayWord() {
+            wordContainer.innerHTML = selectedWord.split(&#39;&#39;).map(letter =&gt; guessedLetters.includes(letter) ? letter : &#39;_&#39;).join(&#39; &#39;);
+        }
+
+        function displayLetters() {
+            const alphabet = &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;.split(&#39;&#39;);
+            lettersContainer.innerHTML = alphabet.map(letter =&gt; `&lt;span class=&quot;letter&quot; onclick=&quot;guessLetter(&#39;${letter}&#39;)&quot;&gt;${letter}&lt;/span&gt;`).join(&#39;&#39;);
+        }
+
+        function guessLetter(letter) {
+            if (guessedLetters.includes(letter)) return;
+            guessedLetters.push(letter);
+            if (selectedWord.includes(letter)) {
+                displayWord();
+                checkWin();
+            } else {
+                wrongAttempts++;
+                checkLose();
+            }
+        }
+
+        function checkWin() {
+            if (selectedWord.split(&#39;&#39;).every(letter =&gt; guessedLetters.includes(letter))) {
+                messageContainer.textContent = &#39;Hai vinto!&#39;;
+                lettersContainer.style.pointerEvents = &#39;none&#39;;
+            }
+        }
+
+        function checkLose() {
+            if (wrongAttempts &gt;= 4) {
+                messageContainer.textContent = `Oh no! You tried, the correct word was ${selectedWord}.`;
+                lettersContainer.style.pointerEvents = &#39;none&#39;;
+            }
+        }
+
+        displayWord();
+        displayLetters();
+    &lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="chap.x" tags="" position="450,575" size="100,100">#Ok, I choice is a choice. Byebye :/
+
+(align:&quot;==&gt;&lt;==&quot;)[&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Fo0Jkzc61Z4?si=IhpdMsNlkyzneRbr&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;]</tw-passagedata><tw-passagedata pid="17" name="chap.4" tags="" position="575,700" size="100,100">###//I&#39;m old but not THAT old!//
+&lt;!--Indizio--&gt;
+(text-size:0.8)[(after:2s)[//I&#39;ll give you an hint!//]
+(after:3s)[//In that &#39;&#39;century&#39;&#39; lived an eclectic man who became famous for://] 
+(after:6s)[//
+* the &#39;&#39;invention&#39;&#39; of the &#39;&#39;airplane&#39;&#39; &lt;i class=&quot;bi bi-airplane&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;drawing&#39;&#39; of the &#39;&#39;man&#39;&#39; fitting perfectly into a circle and a square &lt;i class=&quot;bi bi-person-arms-up&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;painting&#39;&#39; that&#39;s fading away &lt;i class=&quot;bi bi-brush&quot;&gt;&lt;/i&gt;//]
+&lt;!--Scelta--&gt;
+(after:8s)[Choose one century:
+(dropdown: 2bind $century,&quot;-- Select --&quot;,&quot;XVI century&quot;,&quot;XV century&quot;)
+(live: 0.1s)[
+    (if: $century is not &quot;-- Select --&quot; and $century is &quot;XVI century&quot;)[
+        (go-to: &quot;chap.5&quot;)]
+        (if: $century  is not &quot;-- Select --&quot; and $century is &quot;XV century&quot;)
+    [(go-to: &quot;chap.4.1&quot;)]
+]]]
+
+
+
+
+</tw-passagedata><tw-passagedata pid="18" name="chap.4.1" tags="" position="575,825" size="100,100"># //No... you were wrong...//
+(after:2s)[//The century is &#39;&#39;XVI century&#39;&#39;!//]
+
+&lt;!--Scelta--&gt;
+(after:4s)[[[I would like to continue as well|chap.7]]]
+(after:4s)[[[I decided to stop the journey |chap.2]]]
+
+</tw-passagedata><tw-passagedata pid="19" name="chap.7" tags="" position="575,950" size="100,100">## //I&#39;m really happy for your choice to continue our &#39;&#39;journey&#39;&#39;!//
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//Let&#39;s refresh together...//] &lt;br&gt; 
+(after:4s)[//The XVI century was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]</tw-passagedata><tw-passagedata pid="20" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]</tw-passagedata><tw-passagedata pid="21" name="chap.1" tags="" position="575,450" size="100,100"></tw-passagedata><tw-passagedata pid="22" name="chap.2" tags="" position="450,450" size="100,100"></tw-passagedata><tw-passagedata pid="23" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]
+</tw-passagedata><tw-passagedata pid="24" name="chap.2" tags="" position="450,450" size="100,100"># What a pity...&lt;br&gt;
+###(after:1s)[...are you sure?]
+(after:3s)[Give me a chance, you don&#39;t even know what I&#39;m talking about!]
+(after:3s)[At least hear the beginning of the story before deciding...]
+
+&lt;!--Scelta--&gt;
+(after:5s)[[[Let&#39;s try|chap.1]]]
+(after:5s)[[[Sorry, I have no interest|chap.x]]]</tw-passagedata><tw-passagedata pid="25" name="chap.1" tags="" position="575,450" size="100,100">###&#39;&#39;Let&#39;s introduce him!&#39;&#39;
+
+(after:2s)[//Hey you, nice to meet you! I&#39;m Tommaso Fazello and I come from the past, but...//]
+(after:4s)[//..what year is this??? Can you help me?//]
+(after:5s)[(input-box:bind $year,&quot;X&quot;,1)]
+{(live: )[
+    (if: $year is &#39;2024&#39;)[
+        [[[Let&#39;s find out!|chap.3]]](stop: )
+    ]
+]}
+
+
+</tw-passagedata><tw-passagedata pid="26" name="chap.3" tags="" position="575,575" size="100,100">//Oh! $year...it&#39;s been a long time since I was here for the first time!
+You would never believe it but it was almost five hundred years ago...//
+
+(after:5s)[//Can you guess what period am I referring to?//]
+
+&lt;!--Scelte di secolo--&gt;
+(after:6s)[[[XII century|chap.4]]]
+(after:6s)[[[XVI century|chap.5]]]
+(after:6s)[[[XVII century|chap.6]]]</tw-passagedata><tw-passagedata pid="27" name="chap.5" tags="" position="700,700" size="100,100">##//You got it!//
+
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//It was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]
+
+&lt;!--Scelta--&gt;
+[[[Don&#39;t leave me hanging! |chap.8]]]</tw-passagedata><tw-passagedata pid="28" name="chap.6" tags="" position="450,700" size="100,100">###//You are near to the solution!//
+(after:1s)[I challenge you: try to solve the following &#39;hangman game&#39;!] &lt;br&gt;
+(after:3s)[The answer is the solution to the following riddle:]&lt;br&gt;
+(text-style: &quot;smear&quot;)[(after:5s)[Darkness gives way to the light of reason and art. Here, giants of thought and creativity walk in the shadows of ancient ruins, reviving forgotten knowledge. What is this period?]]
+
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;Gioco dell&#39;impiccato&lt;/h1&gt;
+        &lt;div class=&quot;word&quot; id=&quot;word&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;letters&quot; id=&quot;letters&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;message&quot; id=&quot;message&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+   &lt;script&gt;
+ const words = [&#39;RENAISSANCE&#39;];
+let selectedWord = words[Math.floor(Math.random() * words.length)];
+let guessedLetters = [];
+let wrongAttempts = 0;
+
+const wordContainer = document.getElementById(&#39;word&#39;);
+const lettersContainer = document.getElementById(&#39;letters&#39;);
+const messageContainer = document.getElementById(&#39;message&#39;);
+
+function displayWord() {
+    wordContainer.innerHTML = selectedWord.split(&#39;&#39;).map(letter =&gt; guessedLetters.includes(letter) ? letter : &#39;_&#39;).join(&#39; &#39;);
+}
+
+function displayLetters() {
+    const alphabet = &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;.split(&#39;&#39;);
+    lettersContainer.innerHTML = alphabet.map(letter =&gt; `&lt;span class=&quot;letter&quot; onclick=&quot;guessLetter(&#39;${letter}&#39;)&quot;&gt;${letter}&lt;/span&gt;`).join(&#39;&#39;);
+}
+
+function guessLetter(letter) {
+    if (guessedLetters.includes(letter)) return;
+    guessedLetters.push(letter);
+    if (selectedWord.includes(letter)) {
+        displayWord();
+        checkWin();
+    } else {
+        wrongAttempts++;
+        checkLose();
+    }
+}
+
+function checkWin() {
+    if (selectedWord.split(&#39;&#39;).every(letter =&gt; guessedLetters.includes(letter))) {
+        messageContainer.textContent = &#39;Hai vinto!&#39;;
+        lettersContainer.style.pointerEvents = &#39;none&#39;;
+    }
+}
+
+function checkLose() {
+    if (wrongAttempts &gt;= 4) {
+        messageContainer.textContent = `Oh no! You tried, the correct word was ${selectedWord}.`;
+        lettersContainer.style.pointerEvents = &#39;none&#39;;
+    }
+}
+
+displayWord();
+displayLetters();
+&lt;/script&gt;
+&lt;/body&gt;
+
+
+    
+</tw-passagedata><tw-passagedata pid="29" name="chap.x" tags="" position="450,575" size="100,100">#Ok, I choice is a choice. Byebye :/
+
+(align:&quot;==&gt;&lt;==&quot;)[&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Fo0Jkzc61Z4?si=IhpdMsNlkyzneRbr&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;]</tw-passagedata><tw-passagedata pid="30" name="chap.4" tags="" position="575,700" size="100,100">###//I&#39;m old but not THAT old!//
+&lt;!--Indizio--&gt;
+(text-size:0.8)[(after:2s)[//I&#39;ll give you an hint!//]
+(after:3s)[//In that &#39;&#39;century&#39;&#39; lived an eclectic man who became famous for://] 
+(after:6s)[//
+* the &#39;&#39;invention&#39;&#39; of the &#39;&#39;airplane&#39;&#39; &lt;i class=&quot;bi bi-airplane&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;drawing&#39;&#39; of the &#39;&#39;man&#39;&#39; fitting perfectly into a circle and a square &lt;i class=&quot;bi bi-person-arms-up&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;painting&#39;&#39; that&#39;s fading away &lt;i class=&quot;bi bi-brush&quot;&gt;&lt;/i&gt;//]
+&lt;!--Scelta--&gt;
+(after:8s)[Choose one century:
+(dropdown: 2bind $century,&quot;-- Select --&quot;,&quot;XVI century&quot;,&quot;XV century&quot;)
+(live: 0.1s)[
+    (if: $century is not &quot;-- Select --&quot; and $century is &quot;XVI century&quot;)[
+        (go-to: &quot;chap.5&quot;)]
+        (if: $century  is not &quot;-- Select --&quot; and $century is &quot;XV century&quot;)
+    [(go-to: &quot;chap.4.1&quot;)]
+]]]</tw-passagedata><tw-passagedata pid="31" name="chap.4.1" tags="" position="575,825" size="100,100"># //No... you were wrong...//
+(after:2s)[//The century is &#39;&#39;XVI century&#39;&#39;!//]
+
+&lt;!--Scelta--&gt;
+(after:4s)[[[I would like to continue as well |chap.7]]]
+(after:4s)[[[I&#39;ve decided to stop the journey, sorry |chap.2]]]</tw-passagedata><tw-passagedata pid="32" name="chap.7" tags="" position="575,950" size="100,100">## //I&#39;m really happy for your choice to continue our &#39;&#39;journey&#39;&#39;!//
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//Let&#39;s refresh together...//] &lt;br&gt; 
+(after:4s)[//The XVI century was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]
+
+[[[Don&#39;t leave me hanging, now! |chap.8]]]</tw-passagedata><tw-passagedata pid="33" name="chap.8" tags="" position="700,825" size="100,100">##Well, well...
+(after:1s)//I started reading carefully each Greek author because..?...//
+(after:3s)//One of them, Erodoto, wrore for example...-greco-//
+(after:6s)//Can you undestrand?//
+(after:8s)//And another one -?greco-//
+(after:10s)//So, in 1551 I came here and saw...//
+
+[[[Saw what?!|chap.9]]]
+</tw-passagedata><tw-passagedata pid="34" name="chap.9" tags="" position="700,950" size="100,100">#//Nothing! //
+
+(after:1s)//Yes, you heard it well, nothing at all! Except for rocks and grass...//
+(after:3s)//But then...oh come on! You can trust me, follow me and I&#39;ll guide you on a journey into the past!//
+&lt;!-- qui da inserire il fatto che ha camminato un po&#39; e ha visto le rovine dei templi, e allora forse ha trovato una corrispondenza con le scritture--&gt;
+(after:6s)////
+&lt;!-- gli dice di camminare in una direzione--&gt;
+[[[I wanna see the magic happening...|chap.10]]]</tw-passagedata><tw-passagedata pid="35" name="chap.10" tags="" position="700,1075" size="100,100">Wear the headset
+&lt;!-- Dopo aver fatto montare il visore, Fazello continua il racconto --&gt;
+////</tw-passagedata><tw-passagedata pid="36" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]</tw-passagedata><tw-passagedata pid="37" name="chap.1" tags="" position="575,450" size="100,100"></tw-passagedata><tw-passagedata pid="38" name="chap.2" tags="" position="450,450" size="100,100"></tw-passagedata><tw-passagedata pid="39" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]
+</tw-passagedata><tw-passagedata pid="40" name="chap.2" tags="" position="450,450" size="100,100">&lt;!--Scelta--&gt;
+(set: $century to &quot;&quot;)
+
+(dropdown: 2bind $century,&quot;-- Select --&quot;,&quot;XVI century&quot;,&quot;XV century&quot;)
+(live: 0.1s)[
+    (if: $century is not &quot;-- Select --&quot; and $century is not &quot;&quot; and is &quot;XVI century&quot;)[
+        (go-to: &quot;chap.5&quot;)]
+        (if: $century  is not &quot;-- Select --&quot; and $century is not &quot;&quot; and is &quot;XV century&quot;)[
+        (go-to: &quot;chap.4.1&quot;)]
+]</tw-passagedata><tw-passagedata pid="41" name="chap.1" tags="" position="575,450" size="100,100">###&#39;&#39;Let&#39;s introduce him!&#39;&#39;
+
+(after:2s)[&lt;q&gt;Hey you, nice to meet you! I&#39;m Tommaso Fazello and I come from the past, but...&lt;/q&gt;]
+(after:4s)[&lt;q&gt;...what year is this??? Can you help me?&lt;/q&gt;]
+(after:5s)[(input-box:bind $year,&quot;X&quot;,1)]{(live: )[
+    (if: $year is &#39;2024&#39;)[
+        [[[Let me know...|chap.3]]](stop: )
+    ]
+]}
+
+
+</tw-passagedata><tw-passagedata pid="42" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]</tw-passagedata><tw-passagedata pid="43" name="chap.1" tags="" position="575,450" size="100,100"></tw-passagedata><tw-passagedata pid="44" name="chap.2" tags="" position="450,450" size="100,100"></tw-passagedata><tw-passagedata pid="45" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]
+</tw-passagedata><tw-passagedata pid="46" name="chap.2" tags="" position="450,450" size="100,100"># What a pity...&lt;br&gt;
+###(after:1s)[...are you sure?]
+(after:3s)[Give me a chance, you don&#39;t even know what I&#39;m talking about!]
+(after:3s)[At least hear the beginning of the story before deciding...]
+
+&lt;!--Scelta--&gt;
+(after:5s)[[[Let&#39;s try|chap.1]]]
+(after:5s)[[[Sorry, I have no interest|chap.x]]]</tw-passagedata><tw-passagedata pid="47" name="chap.1" tags="" position="575,450" size="100,100">###&#39;&#39;Let&#39;s introduce him!&#39;&#39;
+
+(after:2s)[//Hey you, nice to meet you! I&#39;m Tommaso Fazello and I come from the past, but...//]
+(after:4s)[//..what year is this??? Can you help me?//]
+(after:5s)[(input-box:bind $year,&quot;X&quot;,1)]
+{(live: )[
+    (if: $year is &#39;2024&#39;)[
+        [[[Let&#39;s find out!|chap.3]]](stop: )
+    ]
+]}
+
+
+</tw-passagedata><tw-passagedata pid="48" name="chap.3" tags="" position="575,575" size="100,100">//Oh! $year...it&#39;s been a long time since I was here for the first time!
+You would never believe it but it was almost five hundred years ago...//
+
+(after:5s)[//Can you guess what period am I referring to?//]
+
+&lt;!--Scelte di secolo--&gt;
+(after:6s)[[[XII century|chap.4]]]
+(after:6s)[[[XVI century|chap.5]]]
+(after:6s)[[[XVII century|chap.6]]]</tw-passagedata><tw-passagedata pid="49" name="chap.5" tags="" position="700,700" size="100,100">##//You got it!//
+
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//It was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]
+
+&lt;!--Scelta--&gt;
+</tw-passagedata><tw-passagedata pid="50" name="chap.6" tags="" position="450,700" size="100,100">    &lt;style&gt;
+        /* Inserisci qui il CSS */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .word {
+            font-size: 24px;
+            letter-spacing: 10px;
+        }
+        .letters {
+            margin: 20px 0;
+        }
+        .letter {
+            display: inline-block;
+            margin: 0 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;Gioco dell&#39;impiccato&lt;/h1&gt;
+        &lt;div class=&quot;word&quot; id=&quot;word&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;letters&quot; id=&quot;letters&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;message&quot; id=&quot;message&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        // Inserisci qui il JavaScript
+        const words = [&#39;RENAISSANCE&#39;];
+        let selectedWord = words[Math.floor(Math.random() * words.length)];
+        let guessedLetters = [];
+        let wrongAttempts = 0;
+
+        const wordContainer = document.getElementById(&#39;word&#39;);
+        const lettersContainer = document.getElementById(&#39;letters&#39;);
+        const messageContainer = document.getElementById(&#39;message&#39;);
+
+        function displayWord() {
+            wordContainer.innerHTML = selectedWord.split(&#39;&#39;).map(letter =&gt; guessedLetters.includes(letter) ? letter : &#39;_&#39;).join(&#39; &#39;);
+        }
+
+        function displayLetters() {
+            const alphabet = &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;.split(&#39;&#39;);
+            lettersContainer.innerHTML = alphabet.map(letter =&gt; `&lt;span class=&quot;letter&quot; onclick=&quot;guessLetter(&#39;${letter}&#39;)&quot;&gt;${letter}&lt;/span&gt;`).join(&#39;&#39;);
+        }
+
+        function guessLetter(letter) {
+            if (guessedLetters.includes(letter)) return;
+            guessedLetters.push(letter);
+            if (selectedWord.includes(letter)) {
+                displayWord();
+                checkWin();
+            } else {
+                wrongAttempts++;
+                checkLose();
+            }
+        }
+
+        function checkWin() {
+            if (selectedWord.split(&#39;&#39;).every(letter =&gt; guessedLetters.includes(letter))) {
+                messageContainer.textContent = &#39;Hai vinto!&#39;;
+                lettersContainer.style.pointerEvents = &#39;none&#39;;
+            }
+        }
+
+        function checkLose() {
+            if (wrongAttempts &gt;= 4) {
+                messageContainer.textContent = `Oh no! You tried, the correct word was ${selectedWord}.`;
+                lettersContainer.style.pointerEvents = &#39;none&#39;;
+            }
+        }
+
+        displayWord();
+        displayLetters();
+    &lt;/script&gt;</tw-passagedata><tw-passagedata pid="51" name="chap.x" tags="" position="450,575" size="100,100">#Ok, I choice is a choice. Byebye :/
+
+(align:&quot;==&gt;&lt;==&quot;)[&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Fo0Jkzc61Z4?si=IhpdMsNlkyzneRbr&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;]</tw-passagedata><tw-passagedata pid="52" name="chap.4" tags="" position="575,700" size="100,100">###//I&#39;m old but not THAT old!//
+&lt;!--Indizio--&gt;
+(text-size:0.8)[(after:2s)[//I&#39;ll give you an hint!//]
+(after:3s)[//In that &#39;&#39;century&#39;&#39; lived an eclectic man who became famous for://] 
+(after:6s)[//
+* the &#39;&#39;invention&#39;&#39; of the &#39;&#39;airplane&#39;&#39; &lt;i class=&quot;bi bi-airplane&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;drawing&#39;&#39; of the &#39;&#39;man&#39;&#39; fitting perfectly into a circle and a square &lt;i class=&quot;bi bi-person-arms-up&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;painting&#39;&#39; that&#39;s fading away &lt;i class=&quot;bi bi-brush&quot;&gt;&lt;/i&gt;//]
+&lt;!--Scelta--&gt;
+(after:8s)[Choose one century:
+(dropdown: 2bind $century,&quot;-- Select --&quot;,&quot;XVI century&quot;,&quot;XV century&quot;)
+(live: 0.1s)[
+    (if: $century is not &quot;-- Select --&quot; and $century is &quot;XVI century&quot;)[
+        (go-to: &quot;chap.5&quot;)]
+        (if: $century  is not &quot;-- Select --&quot; and $century is &quot;XV century&quot;)
+    [(go-to: &quot;chap.4.1&quot;)]
+]]]
+
+
+
+
+</tw-passagedata><tw-passagedata pid="53" name="chap.4.1" tags="" position="575,825" size="100,100"># //No... you were wrong...//
+(after:2s)[//The century is &#39;&#39;XVI century&#39;&#39;!//]
+
+&lt;!--Scelta--&gt;
+(after:4s)[[[I would like to continue as well|chap.7]]]
+(after:4s)[[[I decided to stop the journey |chap.2]]]
+
+</tw-passagedata><tw-passagedata pid="54" name="chap.7" tags="" position="575,950" size="100,100">## //I&#39;m really happy for your choice to continue our &#39;&#39;journey&#39;&#39;!//
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//Let&#39;s refresh together...//] &lt;br&gt; 
+(after:4s)[//The XVI century was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]</tw-passagedata><tw-passagedata pid="55" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]</tw-passagedata><tw-passagedata pid="56" name="chap.1" tags="" position="575,450" size="100,100"></tw-passagedata><tw-passagedata pid="57" name="chap.2" tags="" position="450,450" size="100,100"></tw-passagedata><tw-passagedata pid="58" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]
+</tw-passagedata><tw-passagedata pid="59" name="chap.2" tags="" position="450,450" size="100,100"># What a pity...&lt;br&gt;
+###(after:1s)[...are you sure?]
+(after:3s)[Give me a chance, you don&#39;t even know what I&#39;m talking about!]
+(after:3s)[At least hear the beginning of the story before deciding...]
+
+&lt;!--Scelta--&gt;
+(after:5s)[[[Let&#39;s try|chap.1]]]
+(after:5s)[[[Sorry, I have no interest|chap.x]]]</tw-passagedata><tw-passagedata pid="60" name="chap.1" tags="" position="575,450" size="100,100">###&#39;&#39;Let&#39;s introduce him!&#39;&#39;
+
+(after:2s)[//Hey you, nice to meet you! I&#39;m Tommaso Fazello and I come from the past, but...//]
+(after:4s)[//..what year is this??? Can you help me?//]
+(after:5s)[(input-box:bind $year,&quot;X&quot;,1)]
+{(live: )[
+    (if: $year is &#39;2024&#39;)[
+        [[[Let&#39;s find out!|chap.3]]](stop: )
+    ]
+]}
+
+
+</tw-passagedata><tw-passagedata pid="61" name="chap.3" tags="" position="575,575" size="100,100">//Oh! $year...it&#39;s been a long time since I was here for the first time!
+You would never believe it but it was almost five hundred years ago...//
+
+(after:5s)[//Can you guess what period am I referring to?//]
+
+&lt;!--Scelte di secolo--&gt;
+(after:6s)[[[XII century|chap.4]]]
+(after:6s)[[[XVI century|chap.5]]]
+(after:6s)[[[XVII century|chap.6]]]</tw-passagedata><tw-passagedata pid="62" name="chap.5" tags="" position="700,700" size="100,100">##//You got it!//
+
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//It was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]
+
+&lt;!--Scelta--&gt;
+[[[Don&#39;t leave me hanging! |chap.8]]]</tw-passagedata><tw-passagedata pid="63" name="chap.6" tags="" position="450,700" size="100,100">###//You are near to the solution!//
+(after:1s)[I challenge you: try to solve the following &#39;hangman game&#39;!] &lt;br&gt;
+(after:3s)[The answer is the solution to the following riddle:]&lt;br&gt;
+(text-style: &quot;smear&quot;)[(after:5s)[Darkness gives way to the light of reason and art. Here, giants of thought and creativity walk in the shadows of ancient ruins, reviving forgotten knowledge. What is this period?]]
+
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;Gioco dell&#39;impiccato&lt;/h1&gt;
+        &lt;div class=&quot;word&quot; id=&quot;word&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;letters&quot; id=&quot;letters&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;message&quot; id=&quot;message&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+   &lt;script&gt;
+ const words = [&#39;RENAISSANCE&#39;];
+let selectedWord = words[Math.floor(Math.random() * words.length)];
+let guessedLetters = [];
+let wrongAttempts = 0;
+
+const wordContainer = document.getElementById(&#39;word&#39;);
+const lettersContainer = document.getElementById(&#39;letters&#39;);
+const messageContainer = document.getElementById(&#39;message&#39;);
+
+function displayWord() {
+    wordContainer.innerHTML = selectedWord.split(&#39;&#39;).map(letter =&gt; guessedLetters.includes(letter) ? letter : &#39;_&#39;).join(&#39; &#39;);
+}
+
+function displayLetters() {
+    const alphabet = &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;.split(&#39;&#39;);
+    lettersContainer.innerHTML = alphabet.map(letter =&gt; `&lt;span class=&quot;letter&quot; onclick=&quot;guessLetter(&#39;${letter}&#39;)&quot;&gt;${letter}&lt;/span&gt;`).join(&#39;&#39;);
+}
+
+function guessLetter(letter) {
+    if (guessedLetters.includes(letter)) return;
+    guessedLetters.push(letter);
+    if (selectedWord.includes(letter)) {
+        displayWord();
+        checkWin();
+    } else {
+        wrongAttempts++;
+        checkLose();
+    }
+}
+
+function checkWin() {
+    if (selectedWord.split(&#39;&#39;).every(letter =&gt; guessedLetters.includes(letter))) {
+        messageContainer.textContent = &#39;Hai vinto!&#39;;
+        lettersContainer.style.pointerEvents = &#39;none&#39;;
+    }
+}
+
+function checkLose() {
+    if (wrongAttempts &gt;= 4) {
+        messageContainer.textContent = `Oh no! You tried, the correct word was ${selectedWord}.`;
+        lettersContainer.style.pointerEvents = &#39;none&#39;;
+    }
+}
+
+displayWord();
+displayLetters();
+&lt;/script&gt;
+&lt;/body&gt;
+
+
+    
+</tw-passagedata><tw-passagedata pid="64" name="chap.x" tags="" position="450,575" size="100,100">#Ok, I choice is a choice. Byebye :/
+
+(align:&quot;==&gt;&lt;==&quot;)[&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Fo0Jkzc61Z4?si=IhpdMsNlkyzneRbr&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;]</tw-passagedata><tw-passagedata pid="65" name="chap.4" tags="" position="575,700" size="100,100">###//I&#39;m old but not THAT old!//
+&lt;!--Indizio--&gt;
+(text-size:0.8)[(after:2s)[//I&#39;ll give you an hint!//]
+(after:3s)[//In that &#39;&#39;century&#39;&#39; lived an eclectic man who became famous for://] 
+(after:6s)[//
+* the &#39;&#39;invention&#39;&#39; of the &#39;&#39;airplane&#39;&#39; &lt;i class=&quot;bi bi-airplane&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;drawing&#39;&#39; of the &#39;&#39;man&#39;&#39; fitting perfectly into a circle and a square &lt;i class=&quot;bi bi-person-arms-up&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;painting&#39;&#39; that&#39;s fading away &lt;i class=&quot;bi bi-brush&quot;&gt;&lt;/i&gt;//]
+&lt;!--Scelta--&gt;
+(after:8s)[Choose one century:
+(dropdown: 2bind $century,&quot;-- Select --&quot;,&quot;XVI century&quot;,&quot;XV century&quot;)
+(live: 0.1s)[
+    (if: $century is not &quot;-- Select --&quot; and $century is &quot;XVI century&quot;)[
+        (go-to: &quot;chap.5&quot;)]
+        (if: $century  is not &quot;-- Select --&quot; and $century is &quot;XV century&quot;)
+    [(go-to: &quot;chap.4.1&quot;)]
+]]]</tw-passagedata><tw-passagedata pid="66" name="chap.4.1" tags="" position="575,825" size="100,100"># //No... you were wrong...//
+(after:2s)[//The century is &#39;&#39;XVI century&#39;&#39;!//]
+
+&lt;!--Scelta--&gt;
+(after:4s)[[[I would like to continue as well |chap.7]]]
+(after:4s)[[[I&#39;ve decided to stop the journey, sorry |chap.2]]]</tw-passagedata><tw-passagedata pid="67" name="chap.7" tags="" position="575,950" size="100,100">## //I&#39;m really happy for your choice to continue our &#39;&#39;journey&#39;&#39;!//
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//Let&#39;s refresh together...//] &lt;br&gt; 
+(after:4s)[//The XVI century was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]
+
+[[[Don&#39;t leave me hanging, now! |chap.8]]]</tw-passagedata><tw-passagedata pid="68" name="chap.8" tags="" position="700,825" size="100,100">##Well, well...
+(after:1s)//I started reading carefully each Greek author because..?...//
+(after:3s)//One of them, Erodoto, wrore for example...-greco-//
+(after:6s)//Can you undestrand?//
+(after:8s)//And another one -?greco-//
+(after:10s)//So, in 1551 I came here and saw...//
+
+[[[Saw what?!|chap.9]]]
+</tw-passagedata><tw-passagedata pid="69" name="chap.9" tags="" position="700,950" size="100,100">#//Nothing! //
+
+(after:1s)//Yes, you heard it well, nothing at all! Except for rocks and grass...//
+(after:3s)//But then...oh come on! You can trust me, follow me and I&#39;ll guide you on a journey into the past!//
+&lt;!-- qui da inserire il fatto che ha camminato un po&#39; e ha visto le rovine dei templi, e allora forse ha trovato una corrispondenza con le scritture--&gt;
+(after:6s)////
+&lt;!-- gli dice di camminare in una direzione--&gt;
+[[[I wanna see the magic happening...|chap.10]]]</tw-passagedata><tw-passagedata pid="70" name="chap.10" tags="" position="700,1075" size="100,100">Wear the headset
+&lt;!-- Dopo aver fatto montare il visore, Fazello continua il racconto --&gt;
+////</tw-passagedata><tw-passagedata pid="71" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]</tw-passagedata><tw-passagedata pid="72" name="chap.1" tags="" position="575,450" size="100,100"></tw-passagedata><tw-passagedata pid="73" name="chap.2" tags="" position="450,450" size="100,100"></tw-passagedata><tw-passagedata pid="74" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]
+</tw-passagedata><tw-passagedata pid="75" name="chap.2" tags="" position="450,450" size="100,100">&lt;!--Scelta--&gt;
+(set: $century to &quot;&quot;)
+
+(dropdown: 2bind $century,&quot;-- Select --&quot;,&quot;XVI century&quot;,&quot;XV century&quot;)
+(live: 0.1s)[
+    (if: $century is not &quot;-- Select --&quot; and $century is not &quot;&quot; and is &quot;XVI century&quot;)[
+        (go-to: &quot;chap.5&quot;)]
+        (if: $century  is not &quot;-- Select --&quot; and $century is not &quot;&quot; and is &quot;XV century&quot;)[
+        (go-to: &quot;chap.4.1&quot;)]
+]</tw-passagedata><tw-passagedata pid="76" name="chap.1" tags="" position="575,450" size="100,100">###&#39;&#39;Let&#39;s introduce him!&#39;&#39;
+
+(after:2s)[&lt;q&gt;Hey you, nice to meet you! I&#39;m Tommaso Fazello and I come from the past, but...&lt;/q&gt;]
+(after:4s)[&lt;q&gt;...what year is this??? Can you help me?&lt;/q&gt;]
+(after:5s)[(input-box:bind $year,&quot;X&quot;,1)]{(live: )[
+    (if: $year is &#39;2024&#39;)[
+        [[[Let me know...|chap.3]]](stop: )
+    ]
+]}
+
+
+</tw-passagedata><tw-passagedata pid="77" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]</tw-passagedata><tw-passagedata pid="78" name="chap.1" tags="" position="575,450" size="100,100"></tw-passagedata><tw-passagedata pid="79" name="chap.2" tags="" position="450,450" size="100,100"></tw-passagedata><tw-passagedata pid="80" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]
+</tw-passagedata><tw-passagedata pid="81" name="chap.2" tags="" position="450,450" size="100,100"># What a pity...&lt;br&gt;
+###(after:1s)[...are you sure?]
+(after:3s)[Give me a chance, you don&#39;t even know what I&#39;m talking about!]
+(after:3s)[At least hear the beginning of the story before deciding...]
+
+&lt;!--Scelta--&gt;
+(after:5s)[[[Let&#39;s try|chap.1]]]
+(after:5s)[[[Sorry, I have no interest|chap.x]]]</tw-passagedata><tw-passagedata pid="82" name="chap.1" tags="" position="575,450" size="100,100">###&#39;&#39;Let&#39;s introduce him!&#39;&#39;
+
+(after:2s)[//Hey you, nice to meet you! I&#39;m Tommaso Fazello and I come from the past, but...//]
+(after:4s)[//..what year is this??? Can you help me?//]
+(after:5s)[(input-box:bind $year,&quot;X&quot;,1)]
+{(live: )[
+    (if: $year is &#39;2024&#39;)[
+        [[[Let&#39;s find out!|chap.3]]](stop: )
+    ]
+]}
+
+
+</tw-passagedata><tw-passagedata pid="83" name="chap.3" tags="" position="575,575" size="100,100">//Oh! $year...it&#39;s been a long time since I was here for the first time!
+You would never believe it but it was almost five hundred years ago...//
+
+(after:5s)[//Can you guess what period am I referring to?//]
+
+&lt;!--Scelte di secolo--&gt;
+(after:6s)[[[XII century|chap.4]]]
+(after:6s)[[[XVI century|chap.5]]]
+(after:6s)[[[XVII century|chap.6]]]</tw-passagedata><tw-passagedata pid="84" name="chap.5" tags="" position="700,700" size="100,100">##//You got it!//
+
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//It was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]
+
+&lt;!--Scelta--&gt;
+</tw-passagedata><tw-passagedata pid="85" name="chap.6" tags="" position="450,700" size="100,100">    &lt;style&gt;
+        /* Inserisci qui il CSS */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .word {
+            font-size: 24px;
+            letter-spacing: 10px;
+        }
+        .letters {
+            margin: 20px 0;
+        }
+        .letter {
+            display: inline-block;
+            margin: 0 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;Gioco dell&#39;impiccato&lt;/h1&gt;
+        &lt;div class=&quot;word&quot; id=&quot;word&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;letters&quot; id=&quot;letters&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;message&quot; id=&quot;message&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        // Inserisci qui il JavaScript
+        const words = [&#39;RENAISSANCE&#39;];
+        let selectedWord = words[Math.floor(Math.random() * words.length)];
+        let guessedLetters = [];
+        let wrongAttempts = 0;
+
+        const wordContainer = document.getElementById(&#39;word&#39;);
+        const lettersContainer = document.getElementById(&#39;letters&#39;);
+        const messageContainer = document.getElementById(&#39;message&#39;);
+
+        function displayWord() {
+            wordContainer.innerHTML = selectedWord.split(&#39;&#39;).map(letter =&gt; guessedLetters.includes(letter) ? letter : &#39;_&#39;).join(&#39; &#39;);
+        }
+
+        function displayLetters() {
+            const alphabet = &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;.split(&#39;&#39;);
+            lettersContainer.innerHTML = alphabet.map(letter =&gt; `&lt;span class=&quot;letter&quot; onclick=&quot;guessLetter(&#39;${letter}&#39;)&quot;&gt;${letter}&lt;/span&gt;`).join(&#39;&#39;);
+        }
+
+        function guessLetter(letter) {
+            if (guessedLetters.includes(letter)) return;
+            guessedLetters.push(letter);
+            if (selectedWord.includes(letter)) {
+                displayWord();
+                checkWin();
+            } else {
+                wrongAttempts++;
+                checkLose();
+            }
+        }
+
+        function checkWin() {
+            if (selectedWord.split(&#39;&#39;).every(letter =&gt; guessedLetters.includes(letter))) {
+                messageContainer.textContent = &#39;Hai vinto!&#39;;
+                lettersContainer.style.pointerEvents = &#39;none&#39;;
+            }
+        }
+
+        function checkLose() {
+            if (wrongAttempts &gt;= 4) {
+                messageContainer.textContent = `Oh no! You tried, the correct word was ${selectedWord}.`;
+                lettersContainer.style.pointerEvents = &#39;none&#39;;
+            }
+        }
+
+        displayWord();
+        displayLetters();
+    &lt;/script&gt;</tw-passagedata><tw-passagedata pid="86" name="chap.x" tags="" position="450,575" size="100,100">#Ok, I choice is a choice. Byebye :/
+
+(align:&quot;==&gt;&lt;==&quot;)[&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Fo0Jkzc61Z4?si=IhpdMsNlkyzneRbr&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;]</tw-passagedata><tw-passagedata pid="87" name="chap.4" tags="" position="575,700" size="100,100">###//I&#39;m old but not THAT old!//
+&lt;!--Indizio--&gt;
+(text-size:0.8)[(after:2s)[//I&#39;ll give you an hint!//]
+(after:3s)[//In that &#39;&#39;century&#39;&#39; lived an eclectic man who became famous for://] 
+(after:6s)[//
+* the &#39;&#39;invention&#39;&#39; of the &#39;&#39;airplane&#39;&#39; &lt;i class=&quot;bi bi-airplane&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;drawing&#39;&#39; of the &#39;&#39;man&#39;&#39; fitting perfectly into a circle and a square &lt;i class=&quot;bi bi-person-arms-up&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;painting&#39;&#39; that&#39;s fading away &lt;i class=&quot;bi bi-brush&quot;&gt;&lt;/i&gt;//]
+&lt;!--Scelta--&gt;
+(after:8s)[Choose one century:
+(dropdown: 2bind $century,&quot;-- Select --&quot;,&quot;XVI century&quot;,&quot;XV century&quot;)
+(live: 0.1s)[
+    (if: $century is not &quot;-- Select --&quot; and $century is &quot;XVI century&quot;)[
+        (go-to: &quot;chap.5&quot;)]
+        (if: $century  is not &quot;-- Select --&quot; and $century is &quot;XV century&quot;)
+    [(go-to: &quot;chap.4.1&quot;)]
+]]]
+
+
+
+
+</tw-passagedata><tw-passagedata pid="88" name="chap.4.1" tags="" position="575,825" size="100,100"># //No... you were wrong...//
+(after:2s)[//The century is &#39;&#39;XVI century&#39;&#39;!//]
+
+&lt;!--Scelta--&gt;
+(after:4s)[[[I would like to continue as well|chap.7]]]
+(after:4s)[[[I decided to stop the journey |chap.2]]]
+
+</tw-passagedata><tw-passagedata pid="89" name="chap.7" tags="" position="575,950" size="100,100">## //I&#39;m really happy for your choice to continue our &#39;&#39;journey&#39;&#39;!//
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//Let&#39;s refresh together...//] &lt;br&gt; 
+(after:4s)[//The XVI century was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]</tw-passagedata><tw-passagedata pid="90" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]</tw-passagedata><tw-passagedata pid="91" name="chap.1" tags="" position="575,450" size="100,100"></tw-passagedata><tw-passagedata pid="92" name="chap.2" tags="" position="450,450" size="100,100"></tw-passagedata><tw-passagedata pid="93" name="Intro" tags="" position="575,225" size="100,200">###&#39;&#39;Here comes a hooded figure in a long black and white cassock. On closer inspection he is a priest.... &#39;&#39;
+
+(after:5s)[Do you want to know who he is?]
+(after:7s)[[[Yes, I&#39;m very curious! |chap.1]]]
+(after:8s)[[[Nah...I&#39;m not interested. |chap.2]]]
+</tw-passagedata><tw-passagedata pid="94" name="chap.2" tags="" position="450,450" size="100,100"># What a pity...&lt;br&gt;
+###(after:1s)[...are you sure?]
+(after:3s)[Give me a chance, you don&#39;t even know what I&#39;m talking about!]
+(after:3s)[At least hear the beginning of the story before deciding...]
+
+&lt;!--Scelta--&gt;
+(after:5s)[[[Let&#39;s try|chap.1]]]
+(after:5s)[[[Sorry, I have no interest|chap.x]]]</tw-passagedata><tw-passagedata pid="95" name="chap.1" tags="" position="575,450" size="100,100">###&#39;&#39;Let&#39;s introduce him!&#39;&#39;
+
+(after:2s)[//Hey you, nice to meet you! I&#39;m Tommaso Fazello and I come from the past, but...//]
+(after:4s)[//..what year is this??? Can you help me?//]
+(after:5s)[(input-box:bind $year,&quot;X&quot;,1)]
+{(live: )[
+    (if: $year is &#39;2024&#39;)[
+        [[[Let&#39;s find out!|chap.3]]](stop: )
+    ]
+]}
+
+
+</tw-passagedata><tw-passagedata pid="96" name="chap.3" tags="" position="575,575" size="100,100">//Oh! $year...it&#39;s been a long time since I was here for the first time!
+You would never believe it but it was almost five hundred years ago...//
+
+(after:5s)[//Can you guess what period I am referring to?//]
+
+(after:6s)[[[XII century|chap.4]]]
+(after:6s)[[[XVI century|chap.5]]]
+(after:6s)[[[XVII century|chap.6]]]</tw-passagedata><tw-passagedata pid="97" name="chap.5" tags="" position="700,700" size="100,100">##//You got it!//
+
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//It was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+(after:6s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]&lt;br&gt;
+(after:9s)[//We thought we had lost them forever... instead...//]
+
+&lt;!--Scelta--&gt;
+(after:11s)[[[Don&#39;t leave me hanging! |chap.8]]]</tw-passagedata><tw-passagedata pid="98" name="chap.6" tags="" position="450,700" size="100,100">###//You are near to the solution!//
+(after:2s)[I challenge you: try to solve the following &#39;hangman game&#39;!] &lt;br&gt;
+(after:4s)[The answer is the solution to the following riddle:]&lt;br&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;word&quot; id=&quot;word&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;letters&quot; id=&quot;letters&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;message&quot; id=&quot;message&quot;&gt;&lt;/div&gt;
+       &lt;div id=&quot;startMessage&quot;&gt;&lt;/div&gt;
+       &lt;div id=&quot;attemptsMessageContainer&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        const words = [&#39;RENAISSANCE&#39;];
+        let selectedWord = words[Math.floor(Math.random() * words.length)];
+        let guessedLetters = [];
+        let wrongAttempts = 0;
+        const maxAttempts = 4;
+        const wordContainer = document.getElementById(&#39;word&#39;);
+        const lettersContainer = document.getElementById(&#39;letters&#39;);
+        const messageContainer = document.getElementById(&#39;message&#39;);
+        const startMessageContainer = document.getElementById(&#39;startMessage&#39;);
+        const attemptsMessageContainer = document.getElementById(&#39;attemptsMessageContainer&#39;)
+        
+        function displayWord() {
+            wordContainer.innerHTML = selectedWord.split(&#39;&#39;).map(letter =&gt; guessedLetters.includes(letter) ? letter : &#39;_&#39;).join(&#39; &#39;);
+        }
+        function displayLetters() {
+            const alphabet = &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;.split(&#39;&#39;);
+            lettersContainer.innerHTML = alphabet.map(letter =&gt; `&lt;div style=&quot;display: inline-block; margin-right: .5rem; cursor: pointer&quot; class=&quot;letter&quot; &gt;${letter}&lt;/div&gt;`).join(&#39;&#39;);
+            
+            for (let letter of Array.from(document.querySelectorAll(&#39;.letter&#39;))){
+            letter.addEventListener(&#39;click&#39;, () =&gt; {guessLetter(letter.textContent);})
+            }
+        }
+        function guessLetter(letter) {
+            if (guessedLetters.includes(letter)) return;
+            guessedLetters.push(letter);
+            if (selectedWord.includes(letter)) {
+                displayWord();
+                checkWin();
+            } else {
+                wrongAttempts++;
+                updateAttemptsMessage();
+                checkLose();
+            }
+        }
+        function checkWin() {
+            if (selectedWord.split(&#39;&#39;).every(letter =&gt; guessedLetters.includes(letter))){
+                messageContainer.textContent = &#39;You won!&#39;;
+                attemptsMessageContainer.remove();
+                lettersContainer.style.pointerEvents = &#39;none&#39;;
+            }
+        }
+        function checkLose() {
+            if (wrongAttempts &gt;= 4) {
+                messageContainer.textContent = `Oh no! You tried, the correct word was ${selectedWord}`;
+                attemptsMessageContainer.remove();
+                lettersContainer.style.pointerEvents = &#39;none&#39;;
+            }
+        }
+        function updateAttemptsMessage() {
+            const remainingAttempts = maxAttempts - wrongAttempts;
+            attemptsMessageContainer.textContent = `Oh, no! You&#39;ve got still ${remainingAttempts} attempts`;
+        }
+        function startGame() {
+            startMessageContainer.style.display = &#39;none&#39;;
+            displayWord();
+            displayLetters();
+        }
+        setTimeout(startGame, 6000);
+    &lt;/script&gt;
+    &lt;/body&gt;
+
+    
+&lt;!-- aggiungere timer, input dei tentativi quando sbaglia, link al chap.5--&gt;</tw-passagedata><tw-passagedata pid="99" name="chap.x" tags="" position="450,575" size="100,100">#Ok, I choice is a choice. Byebye :/
+
+(align:&quot;==&gt;&lt;==&quot;)[&lt;iframe width=&quot;560&quot; height=&quot;315&quot; style=&quot;padding-top: 50px;&quot; src=&quot;https://www.youtube.com/embed/Fo0Jkzc61Z4?si=szRjnObh9IbP8VhH&amp;amp;start=14&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;]</tw-passagedata><tw-passagedata pid="100" name="chap.4" tags="" position="575,700" size="100,100">###//I&#39;m old but not THAT old!//
+&lt;!--Indizio--&gt;
+(after:2s)[//I&#39;ll give you an hint!//]
+(after:3s)[//In that &#39;&#39;century&#39;&#39; lived an eclectic man who became famous for://] 
+(after:6s)[//
+* the &#39;&#39;invention&#39;&#39; of the &#39;&#39;airplane&#39;&#39; &lt;i class=&quot;bi bi-airplane&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;drawing&#39;&#39; of the &#39;&#39;man&#39;&#39; fitting perfectly into a circle and a square &lt;i class=&quot;bi bi-person-arms-up&quot;&gt;&lt;/i&gt;
+* the &#39;&#39;painting&#39;&#39; that&#39;s fading away &lt;i class=&quot;bi bi-brush&quot;&gt;&lt;/i&gt;//]
+&lt;!--Scelta--&gt;
+(after:10s)[Choose one century:
+(dropdown: 2bind $century,&quot;-- Select --&quot;,&quot;XVI century&quot;,&quot;XV century&quot;)
+(live: 0.1s)[
+    (if: $century is not &quot;-- Select --&quot; and $century is &quot;XVI century&quot;)[
+        (go-to: &quot;chap.5&quot;)]
+        (if: $century  is not &quot;-- Select --&quot; and $century is &quot;XV century&quot;)
+    [(go-to: &quot;chap.4.1&quot;)]
+]]</tw-passagedata><tw-passagedata pid="101" name="chap.4.1" tags="" position="575,825" size="100,100"># //No... you were wrong...//
+(after:2s)[//The century is &#39;&#39;XVI century&#39;&#39;!//]
+
+&lt;!--Scelta--&gt;
+(after:4s)[[[I would like to continue as well |chap.7]]]
+(after:4s)[[[I&#39;ve decided to stop the journey, sorry |chap.2]]]</tw-passagedata><tw-passagedata pid="102" name="chap.7" tags="" position="575,950" size="100,100">##[//I&#39;m really happy for your choice to continue our &#39;&#39;journey&#39;&#39;!//]
+&lt;!--Spiegazione periodo corretto--&gt;
+(after:2s)[//Let&#39;s refresh together...//]
+
+(after:4s)[//The XVI century was a crucial period of time in Italy and all over Europe. We didn&#39;t know at that time but later the following generations defined it as &#39;&#39;Renaissance&#39;&#39;.//]
+
+(after:8s)[//I remember that time... it was indeed full of cultural excitement for the rediscovery of works of ancient authors both from Latin and Greek literature.//]
+
+(after:12s)[//We thought we had lost them forever... instead...//]
+
+(after:14s)[[[Don&#39;t leave me hanging, now! |chap.8]]]</tw-passagedata><tw-passagedata pid="103" name="chap.9" tags="" position="700,950" size="100,100">//...In 1551 I arrived in the &#39;&#39;land of Lipulci&#39;&#39;. Every historician passing through the land described it as part of Mazara, the small city that you saw in the map which is near another one called &#39;&#39;Selinunte&#39;&#39;.//
+
+(after:8s)[(align:&quot;===&gt;&lt;==&quot;)[&lt;img src=&quot;https://edl-jarvis.cultura.gov.it/images/iiif/db/f1384416-da77-4456-9b25-219287f8eb7d/2146,9026,1504,1128/400,/0/default.jpg&quot; style=&quot;padding-top: 50px;&quot;/&gt;]]
+
+(after:9s)[//I try to explain me better...what you can see in the map above was not there in my time!//]
+
+(after:12s)[//The rocks and the ruins that you are seeing now we did not know was &#39;&#39;Selinunte&#39;&#39;...//]
+
+(after:14s)[//...are you following me? I&#39;m doing my best...//]
+
+(after:15s)[[[Go on!|chap.10]]]</tw-passagedata><tw-passagedata pid="104" name="chap.10" tags="" position="700,1075" size="100,100">###//Please trust me and you will understand everything...//
+
+(after:2s)[//What was I saying? Ahh yes, that &#39;&#39;Selinunte&#39;&#39; was not &#39;&#39;Selinunte&#39;&#39; or rather it was defined the &#39;&#39;land of Lipulci&#39;&#39;.//]
+
+(after:5s)[//It was the fault of Mazara&#39;s citizens, but... we must forgive them...//]
+
+(after:8s)[//...they fell into deception!//]
+
+(after:10s)[//Well, you might wonder how I am so so sure, right?//]
+
+(after:13s)[//It only takes four tours of the island to convince me that the so desolate and devasted &#39;&#39;land of Lipulci&#39;&#39; is what you call today &#39;&#39;Selinunte&#39;&#39;?//]
+
+(after:16s)[[[It&#39;s exactly what I am thinking about|chap.11]]]
+(after:16s)[[[I wasn&#39;t thinking that but go on|chap.11]]]</tw-passagedata><tw-passagedata pid="105" name="chap.8" tags="pulci" position="700,825" size="100,100">##Well, well...
+
+(after:2s)[//I was still a teenager when I entered the convent of S. Domenico in Palermo and I began to get interested in the history of Sicily...//]
+
+(after:6s)[//I was so curious to discover &#39;&#39;everything&#39;&#39; about the traces of ancient cities in the island that I made &#39;&#39;four&#39;&#39; complete tours of Sicily, riding on my mule.//]
+
+(after:8s)[&lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://storiiies.cogapp.com/embed/28681/A-journey-around-Sicily-by-Tommaso-Fazello&quot; title=&quot;A journey around Sicily by Tommaso Fazello&quot;&gt;&lt;/iframe&gt;]
+
+(after:16s)[//Yes, my friends, I repeated the journey four times!!//]
+
+(after:17s)[[[..and??..|chap.9]]]</tw-passagedata><tw-passagedata pid="106" name="chap.11" tags="" position="700,1200" size="100,100">###//Have you ever heard about &#39;&#39;Diodoro Siculo&#39;&#39;?//
+
+(after:2s)[//I guess at least once you run into his &#39;&#39;Bibliotheca historica&#39;&#39;.//]
+
+(after:5s)[//Well, Diodoro in this work told about the universal history. The XIII, XX and XXI are dedicated to the history of Selinunte.//]
+
+(after:9s)[//At first on good relations with the Carthaginians, the Battle of Imera (480 B.C.) brought to Selinunte&#39;s destruction.//]
+
+(after:13s)[//As in any turbulent history, the Selinuntines also had an ally... the city of Syracuse! The Syracusans helped the Selinuntines to achieve victory against the Carthaginians at the Battle of Imera (480 BC).//]
+
+(after:19s)[//This is how Diodoro recalls the Battle of Imera in his Bubliotheca historica XIII://]
+
+(after:20s)[&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; allow=&quot;autoplay&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1852772868&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&quot;&gt;&lt;/iframe&gt;]
+
+(after:20s)[«The battle of Syracuse against the Carthaginians and the victory of the Syracusans...The Syracusans defeated four thousand Carthaginians who retaliated and killed more than sixteen thousand.»]
+
+(after:28s)[[[Did then come another battle?|chap.12]]]
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="107" name="chap.12" tags="guerra" position="700,1325" size="100,100">(enchant:?page,(text-colour:black))
+##//Unfortunately...yes...//
+(after:2s)|story&gt;[//There was a second battle in Imera in 409 B.C. where &#39;&#39;Hannibal Mago&#39;&#39;, general of the Carthaginians, destroyed many cities in Sicily including Selinunte.//]
+
+(after:6s)|story&gt;[//After this tragic event, thanks to the sicilian soldier &#39;&#39;Ermocrate&#39;&#39;, Selinunte was reconstructed and lived a period of peace.//]
+
+(after:9s)+(text-color: white)|end&gt;[[[Sounds like a happy ending...|chap.13]]]
+
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="108" name="chap.13" tags="" position="700,1450" size="100,100">##//Not really...//
+
+(after:2s)[//The city was totally destroyed and abandoned, so it was forgotten for a long period of time, after the battle of Selinunte (409 B.C.)//]
+
+(after:6s)[//Here another historician, Senofonte, remembers this battle in his work &#39;&#39;Helleniche&#39;&#39; I.1.36://]
+
+(after:8s)[&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; allow=&quot;autoplay&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1852757127&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&quot;&gt;&lt;/iframe&gt;]
+
+(after:8s)[«Hannibal&#39;s Carthaginians, having marched into Sicily with ten myriads of troops, overthrew two Greek cities, Selinunte and Imera, in three months.»]
+
+
+(after:15s)[//And after that, the city of Selinunte has never reached the ancient splendour.//]
+
+(after:18s)[[[Such a sad story|chap.14]]]</tw-passagedata><tw-passagedata pid="109" name="chap.14" tags="" position="700,1575" size="100,100">###//No, my friends, don&#39;t be sad!//
+
+(after:2s)[//It&#39;s actually a story of death and rebirth and it teaches us a very important lesson: to never be convinced by rumors and legends but to rely on the words of classical authors, which are our sources to rediscover antiquity.//]
+
+(after:10s)[//After 1551, many studies and researches have followed to try to reconstruct the story of this place. Some temples were even reconstructed with the remaining pieces, for example the Temple E.//]
+
+(after:15s)[&lt;img src=&quot;https://www.worldhistory.org/uploads/images/2600.jpg?v=1718101927&quot; width=&quot;75%&quot; height=&quot;75%&quot;/&gt;]
+
+(after:18s)[«Some other pieces, representing the decorative part of this temple, were instead taken to the archeological museum of Palermo together with other Selinunte&#39;s artefacts.»]
+
+(after:21s)[&lt;img src=&quot;https://www.selinunte.net/metopeE7.gif&quot;/&gt;]
+
+(after:23s)[[[I want to know more!|chap.15]]]</tw-passagedata><tw-passagedata pid="110" name="chap.15" tags="" position="700,1700" size="100,100">###//My time has come, but I leave you with some powerful tools that will help you to enjoy the park.//
+
+(after:3s)[//Relax, take your time, and experience the enchantment of the past!//]
+
+(after:5s)[(align:&quot;==&gt;&lt;==&quot;)[&lt;iframe width=&quot;560&quot; height=&quot;315&quot; style=&quot;padding-top: 50px;&quot; src=&quot;https://www.youtube.com/embed/Fo0Jkzc61Z4?si=T14bVbRPBFbd7qdJ&amp;amp;start=4&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;]]</tw-passagedata></tw-storydata>
+
